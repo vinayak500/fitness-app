@@ -1,0 +1,666 @@
+body {
+  font-family: 'Josefin Sans';
+  background-color: #FFFAFB;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+ /* Horizontal scrollbar */
+
+.right-arrow,
+.left-arrow {
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF2625;
+  font-size: 25px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: -20px;
+  right: 80px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+
+
+.right-arrow {
+  right: 140px;
+}
+
+.right-arrow:hover,
+.left-arrow:hover {
+  transform: scale(1.3, 1.3);
+}
+
+.react-horizontal-scrolling-menu--wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail-image {
+  width: 729px;
+  height: 742px;
+}
+
+
+.exercise-video {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 387px;
+  height: 381px;
+  text-decoration: none;
+}
+
+@media screen and (max-width:1200px) {
+  .detail-image {
+    width: 300px;
+    height: 300px;
+  }
+
+
+  .react-horizontal-scrolling-menu--scroll-container {
+    width: 500px;
+  }
+
+  .left-arrow,
+  .right-arrow {
+    position: static !important;
+  }
+
+  .hero-banner-img {
+    display: none;
+  }
+
+  .exercise-card {
+    width: 320px;
+  }
+
+  .exercise-video {
+    width: 320px;
+    height: 300px;
+  }
+
+}
+
+@media screen and (max-width:400px) {
+  .exercise-card {
+    width: 280px;
+  }
+}
+
+
+
+ /* hero banner component */
+
+
+.hero-banner {
+  margin-top: 212px;
+  margin-left: 50px;
+  position: relative;
+  padding: 20px;
+}
+
+.hero-banner p {
+  color: #FF2625;
+}
+
+.hero-banner .title {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.hero-banner .subtitle {
+  font-weight: 700;
+  font-size: 44px;
+  margin-bottom: 23px;
+  margin-top: 30px;
+  color: black;
+}
+
+.hero-banner .description {
+  font-size: 22px;
+  font-family: Alegreya;
+  line-height: 35px;
+}
+
+.hero-banner .explore-button {
+  margin-top: 45px;
+  text-decoration: none;
+  width: 200px;
+  text-align: center;
+  background: #FF2625;
+  padding: 14px;
+  font-size: 22px;
+  text-transform: none;
+  color: white;
+  border-radius: 4px;
+}
+
+.hero-banner .explore-button a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.hero-banner .exercise-text {
+  font-weight: 600;
+  color: #FF2625;
+  opacity: 0.1;
+  font-size: 200px;
+}
+
+.hero-banner-img {
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  width: 650px;
+  height: 800px;
+  margin-top: -330px;
+  border-radius: 20%;
+
+}
+
+
+  /* searched excercises component */
+.search-exercises {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 37px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.search-exercises h2 {
+  font-weight: 700;
+  font-size: 44px;
+  margin-bottom: 49px;
+  text-align: center;
+}
+
+.search-exercises input {
+  height: 76px;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  width: 1170px;
+  background-color: #fff;
+  border-radius: 40px;
+}
+
+.search-exercises .search-btn {
+  background-color: #FF2625;
+  color: #fff;
+  text-transform: none;
+  width: 173px;
+  height: 56px;
+  position: absolute;
+  right: 0px;
+  font-size: 20px;
+  margin-right: 60px;
+}
+
+.search-exercises .scrollbar-container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
+
+
+
+/* navbar */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-top: 32px;
+  padding-left: 20px;
+}
+
+.navbar-logo {
+  width: 48px;
+  height: 48px;
+  margin: 0px 20px;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  font-family: Alegreya;
+  font-size: 24px;
+  align-items: flex-end;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #3A1212;
+}
+
+.navbar-links a:hover {
+  border-bottom: 3px solid #FF2625;
+}
+
+
+/* detail component */
+
+.detail-container {
+  display: flex;
+  gap: 60px;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+}
+
+.detail-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.detail-text {
+  display: flex;
+  gap: 35px;
+  flex-direction: column;
+}
+
+.detail-title {
+  font-size: 64px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.detail-description {
+  font-size: 24px;
+  color: #4F4C4C;
+}
+
+.detail-extra {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+}
+
+.detail-icon {
+  background: #FFF2DB;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.detail-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.detail-name {
+  text-transform: capitalize;
+  font-size: 30px;
+}
+
+
+/* excercise videos component */
+.exercise-videos-container {
+  margin-top: 203px;
+  padding: 20px;
+}
+
+.exercise-videos-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 33px;
+}
+
+.exercise-videos-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 110px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.exercise-video {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.exercise-video img {
+  border-top-left-radius: 20px;
+}
+
+.exercise-video-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exercise-video-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+}
+
+.exercise-video-channel {
+  font-size: 14px;
+  color: #000;
+}
+
+.similar-exercises-container {
+  margin-top: 100px;
+}
+
+.similar-exercises-title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #000;
+  margin-left: 20px;
+  margin-bottom: 33px;
+}
+
+.similar-exercises-section {
+  position: relative;
+  padding: 2px;
+}
+
+.similar-exercises-scrollbar {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #c4c4c4 #ffffff;
+}
+
+.similar-exercises-item {
+  flex-shrink: 0;
+  min-width: 240px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.similar-exercises-item:hover {
+  background-color: #e5e5e5;
+}
+
+
+/* footer */
+.footer-container {
+  margin-top: 80px;
+  background-color: #FFF3F4;
+}
+
+.footer-logo {
+  width: 200px;
+  height: 41px;
+}
+
+.footer-text {
+  font-size: 28px;
+  margin-top: 41px;
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 28px;
+}
+
+/* bodypart */
+.bodyPart-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.bodyPart-card.selected {
+  border-top: 4px solid #FF2625;
+  background: #fff;
+  border-bottom-left-radius: 20px;
+  width: 270px;
+  height: 282px;
+  cursor: pointer;
+  gap: 47px;
+}
+
+.bodyPart-card img {
+  width: 40px;
+  height: 40px;
+}
+
+.bodyPart-label {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Alegreya;
+  color: #3A1212;
+  text-transform: capitalize;
+}
+
+
+
+
+.exercise-card {
+  width: 400px;
+  height: 445px;
+  background: #fff;
+  border-top: 4px solid #FF2625;
+  border-bottom-left-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 10px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+.exercise-card img {
+  height: 326px;
+}
+
+.button-group {
+  display: flex;
+  margin-left: 21px;
+}
+
+.exercise-button-left {
+  margin-right: 21px;
+  color: #fff;
+  background: orange;
+  font-size: 14px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  padding: 6px 16px;
+}
+
+.exercise-button-right{
+  margin-right: 21px;
+  color: #fff;
+  background: #FFA9A9;
+  font-size: 14px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  padding: 6px 16px;
+}
+
+
+
+
+
+.exercise-name {
+  margin-left: 21px;
+  color: #000;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.bodyPart-card {
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+.exercise-card:hover,
+.bodyPart-card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.search-btn:hover {
+  color: #FF2625 !important;
+  border: 1px solid #FF2625 !important;
+}
+
+
+
+.exercises-container {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.exercises-container h4 {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 46px;
+}
+
+.exercise-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.pagination-container {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-container{
+  background-color: black;
+  color:lightgrey;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.horizontal-list2{
+  list-style: none;
+  padding:0px;
+  margin:0px;
+
+}
+
+
+.horizontal-list2 li{
+  display: inline-block;
+  margin:20px 20px 20px 0px;
+  font-size: 15px;
+}
+
+.horizontal-list2 li a {
+  color:lightgray;
+  text-decoration: none;
+  border-radius: 50%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.calorie-cal-container{
+  height:100%;
+  width:100%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.calorie-cal-container h2{
+  text-align: center;
+  font-size: 30px;
+  color:rgb(0, 187, 244);
+}
+
+.calorie-cal-container p{
+  font-size: 18px;
+}
+
+#p11{
+  text-align: center;
+  margin-top: 20px;
+}
+
+#p12{
+  text-align: center;
+  margin-top: 20px;
+}
+
+#container{
+  margin-top: 20px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#inner-cont1{
+  background-color:rgb(0, 187, 244);
+}
+
+#fieldset1{
+  padding: 50px;
+  color: white;
+}
+
+#inner-cont2 ul li{
+      font-size: 18px;
+      font-weight: 500;
+}
+
+
+#table2{
+  margin-top: 40px;
+}
+
+#table2 td{
+   border:1px solid black;
+}
+
+#table2 #tablerow2{
+  background-color:rgb(0, 187, 244);
+  color:white;
+  
+}
+
+#table2 td{
+  padding: 5px;
+}
+
+#form1 input{
+  margin-top: 20px;
+}
